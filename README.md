@@ -40,7 +40,7 @@ To get started with @aoijs/aoi.music, follow these simple steps:
          spotifyPlaylistLimit: 30, // Limit the number of tracks in a Spotify playlist, default: -1
       },
    });
-   ```
+   ``
 
 ## 📚 Documentation
 
