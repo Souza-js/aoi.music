@@ -1,24 +1,30 @@
-{
-   "compilerOptions": {
-       "declaration": true,
-       "sourceMap": true,
-       "target": "es2021",
-       "module": "CommonJS",
-       "moduleResolution": "Node",
-       "esModuleInterop": true,
-       "allowSyntheticDefaultImports": true,
-       "experimentalDecorators": true,
-       "skipLibCheck": true,
-       "skipDefaultLibCheck": true,
-       "pretty": true,
-       "rootDir": "src",
-       "outDir": "lib"
+
+"compilerOptions": {
+   "allowSyntheticDefaultImports": true,
+   "alwaysStrict": true,
+   "declaration": true,
+   "declarationDir": "./types",
+   "rootDir": "./src",
+   "outDir": "./dist",
+   "esModuleInterop": true,
+   "incremental": true,
+   "module": "CommonJS",
+   "target": "ES2023",
+   "paths": {
+       "@utils/*": ["./src/utils/*"],
+       "@handlers/*": ["./src/classes/handlers/*"],
+       "@managers/*": ["./src/classes/managers/*"],
+       "@structures/*": ["./src/classes/structures/*"]
    },
-   "include":[ 
-      "src/**/*"
-   ],
-   "exclude": [
-      "node_modules"
-   ],
-   "compileOnSave":false
+   "tsBuildInfoFile": "./__dump__/.tsbuildinfo",
+   "skipLibCheck": true
+},
+"include": [
+   "./src/**/*.ts"
+],
+"exclude": [
+   "./__dump__",
+   "./__test__",
+   "./node_modules",
+]
 }
